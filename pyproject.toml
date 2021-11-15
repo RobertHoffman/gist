@@ -9,6 +9,11 @@ name = "tsinghua"
 url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
 default = true
 
+[[tool.poetry.source]]
+name = 'pypi_'
+url = 'https://pypi.org/simple/'
+default = false
+
 [tool.poetry.dependencies]
 python = "^3.7"
 jupyterlab = "^3.0.0"
@@ -19,7 +24,7 @@ plotly = "^5.3.1"
 plotly-express = "^0.4.1"
 jupyter-dash = "^0.4.0"
 scipy = "^1.0.0"
-kaleido = "^0.2.0"
+kaleido = {url = "https://github.com/plotly/Kaleido/releases/download/v0.2.1/kaleido-0.2.1-py2.py3-none-win_amd64.whl"}
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
