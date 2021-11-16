@@ -25,6 +25,9 @@ plotly-express = "^0.4.1"
 jupyter-dash = "^0.4.0"
 scipy = "^1.0.0"
 kaleido = {url = "https://github.com/plotly/Kaleido/releases/download/v0.2.1/kaleido-0.2.1-py2.py3-none-win_amd64.whl"}
+requests = "^2.26.0"
+beautifulsoup4 = "^4.10.0"
+lxml = "^4.6.4"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
