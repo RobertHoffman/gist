@@ -2,15 +2,19 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import requests
 import time
-import re
+import argparse
 
 session = requests.Session()
 session.trust_env = False  # 让爬虫不走代理
 
+parser = argparse.ArgumentParser(description='设置关键词')
+parser.add_argument('--key', type=str)
+args = parser.parse_args()
+
 params = dict(
     headId='a34970ca076be9ade253b63e65919eae',
     ckId='a34970ca076be9ade253b63e65919eae',
-    key='5G',
+    key=args.key,
 )
 header = dict(
     user_agent=r'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
@@ -66,6 +70,6 @@ if __name__ == '__main__':
             time.sleep(0.5)
 
     output_data = pd.concat(datas, axis=0)
-    output_data.to_excel(r'E:\桌面\建投工作文件\就业爬数据\职业数据小样.xlsx', sheet_name='猎聘网', engine='openpyxl')
+    output_data.to_excel(rf'E:\桌面\建投工作文件\就业爬数据\高端职业数据 {args.key} {time.time()}.xlsx', sheet_name='猎聘网', engine='openpyxl')
 
 # TODO 包含登录的情况和滑动验证框。

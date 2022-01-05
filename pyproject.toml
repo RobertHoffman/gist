@@ -17,17 +17,24 @@ default = false
 [tool.poetry.dependencies]
 python = "^3.7"
 jupyterlab = "^3.0.0"
+jupyter-dash = "^0.4.0"
+jupyterlab-language-pack-zh-cn = "^3.2.post2"
+
 pandas = "^1.0.0"
+scipy = "^1.0.0"
 openpyxl = "^3.0.9"
+
 seaborn = "^0.11.2"
 plotly = "^5.3.1"
 plotly-express = "^0.4.1"
-jupyter-dash = "^0.4.0"
-scipy = "^1.0.0"
 kaleido = {url = "https://github.com/plotly/Kaleido/releases/download/v0.2.1/kaleido-0.2.1-py2.py3-none-win_amd64.whl"}
+
 requests = "^2.26.0"
 beautifulsoup4 = "^4.10.0"
 lxml = "^4.6.4"
+
+jqdatasdk = "^1.8.10"
+
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
